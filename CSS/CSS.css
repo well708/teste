@@ -1,246 +1,205 @@
-/* CSSs gerais do site */
-body {
-	font-family: Arial, Helvetica, sans-serif;
-	padding: 0;
-	margin: auto;
-	min-width: 320px;
-	max-width: 1200px; /* Mudado de 320px para 1200px */
-	border: 2px solid #cfccc7;
-  }
-  
-  /* CSSs do menu */
-  header {
-	background-color: #F5DEB3;
-	padding: 5px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-  }
-  
-  #logo {
-	display: flex;
-	width: 100px;
-	height: 100px;
-  }
-  
-  .menu:hover {
-	transform: scale(1.01);
-  }
-  
-  div ul {
-	list-style: none;
-	color: #000000;
-	display: flex;
-	flex-wrap: wrap;
-  }
-  
-  div li a {
-	text-decoration: none;
-	margin-left: 30px;
-	color: rgb(69, 68, 68);
-	font-size: 30px;
-  }
-  
-  div a:hover {
-	color: #ff0000f6;
-  }
-  /*  */
-  
-  /* Implementado para tornar a seção principal responsiva */
-  .cessão {
-	background-image: url(img_css/imagem\ do\ banner\ escura.png);
-	background-size: cover;
-	height: 500px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	color: #FF6347;
-	margin-top: 50px;
-  }
-  
-  #color1 {
-	color: #f2f2f2f2;
-  }
-  
-  .cessão h2 {
-	font-size: 48px;
-	margin: 0;
-  }
-  
-  .cessão a {
-	background-color: #FF6347;
-	color: #FFF;
-	padding: 10px 20px;
-	border-radius: 50px;
-	text-decoration: none;
-	font-size: 18px;
-	margin-top: 20px;
-  }
-  
-  .cessão a:hover {
-	background-color: #000;
-  }
-  
-  /* Implementado para tornar a seção de produtos responsiva */
-  .produtos {
-	display: flex;
-	margin-top: 40px;
-	margin-left: 50px;
-	flex-wrap: wrap; /* Adicionado para que os produtos sejam distribuídos em várias linhas */
-  }
-  
-  /* Caixa de produtos */
-  .produto {
-	flex: 1; /* Mudado de 3 para 1 para que caibam 3 produtos em uma linha em telas menores */
-	margin-right: 50px;
-	border: 2px solid #DDD;
-	transition: transform 0.2s step-end;
-	margin-bottom: 40px; /* Adicionado para criar um espaço entre as caixas de produtos */
-  }
-  
-  .produto:hover {
-	transform: scale(1.01);
-  }
-  
-  .produto img {
-	max-width: 100%;
-	border-radius: 5px;
-	margin-bottom: 10px;
-  }
-  
-  .produto h3 {
-	margin: 0;
-	font-size: 24px;
-  }
-  
-  /* Estilo do texto dos produtos */
-.produto p {
-	font-size: 16px;
-	margin-top: 10px;
-	color: #555;
-}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: auto;
+    min-width: 320px;/* tamanho mínimo da página */
+    max-width: 100%;/*tamanho máximo da página  */
+    border: 2px solid #cfccc7;
+    }
+    /* CSS do menu */
+    header{
+        background-color: #F5DEB3;
+        padding:5px;
+        display: flex;
+        align-items: center;/* centraliza verticalmente os itens dentro do contêiner */
+        justify-content: space-between;  
+    }
+    #logo{
+        display: flex;
+        width: 100px;
+        height: 100px;
+    }
+    .menu:hover{
+        transform: scale(1.01); /* aumenta o tamanho do box ao passar o cursor */
+    }
+    div ul{
+        list-style: none; /*remove marcas de listas, pontos, número…*/
+		display: flex;
+        color: #000000;
+        display: wrap;
+    }
+    div li a {
+        text-decoration: none;
+        margin-left: 30px;/* espaçamento entre textos*/
+        color: rgb(69, 68, 68);
+        font-size: 30px;
+    }
+    div a:hover{ /* implementa cor ao passar o cursor sobre os itens do menu */
+        color: #ff0000f6;
+    }
+    .cessão {
+        background-image: url(img_css/imagem\ do\ banner\ escura.png);
+        /* background-position: center; */
+        background-size: cover;/* usada para definir o tamanho da imagem de fundo  */
+        height: 500px;/* define a altura de um elemento */
+        display: flex;
+        /* define um elemento como um contêiner flexível  */
+        flex-direction: column;/* define a direção em que os itens são posicionados dentro de um contêiner flexível */
+        justify-content: center;/* centralizar os itens dentro de um contêiner flexível horizontalmente */
+        align-items: center;/* alinha os ítens no centro */
+        color: #FF6347;
+        margin-top: 50px;
+    }
+    #color1 {
+        color: #f2f2f2f2;
+    }
+    .cessão h2 {
+        font-size: 48px;
+        margin: 0;
+    }
+    .cessão a {
+        background-color: #FF6347;
+        color: #FFF;
+        padding: 10px 20px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    .cessão a:hover{
+        background-color: #000;
+    }
+    .produtos {
+        display: flex;
+	  flex-wrap: wrap; /* faz com que os produtos sejam distribuídos em várias linhas */
+        margin-top: 40px;
+        margin-left: 50px;
+    }
+    .produto {
+		flex:1;/*quantidade de “caixa” em telas menores*/
+        margin-right: 50px;
+        border: 2px solid #DDD;/* espessura da caixa de itens  */
+        transition: transform 0.2s step-end;/*tempo de transição no tamanho do item*/
+        margin-bottom: 40px; /* cria um espaço entre as caixas de produtos */
+   }
+    .produto:hover {
+        transform: scale(1.01); /* aumenta o tamanho do da caixa de produtos*/
+    }
+    .produto img {
+        max-width: 100%;
+        border-radius: 5px;/* arredonda os cantos da caixa de produtos */
+        margin-bottom: 10px;
+    }
+    .produto h3 {
+        margin: 0;
+        font-size: 24px;
+    }
+    .produto p {
+        font-size: 16px;
+        margin-top: 10px;
+        color: #555;
+    }
+    .produto button {/* Decoração do butão */
+        background-color: #FF6347;
+        color: #FFF;
+        border: none;
+        padding: 10px 20px;/* tamanho da caixa butão*/
+        border-radius: 50px;/* arredonda os cantos da caixa do butão  */
+        font-size: 18px;
+        cursor: pointer;/* transforma o cursor em ponteiro */
+    }
+    .produto button:hover {/* deixa a caixa do button escura ao passar o cursor por cima */
+        background-color: #030303;
+    }
+   
+    .about {
+        margin-top: 40px;  
+    }
+    .about p {
+        font-size: 18px;
+        line-height: 1.5;
+        color: #555;
+        margin-top: 10px;
+    }
+    .about a {
+        background-color: #FF6347;
+        color: #FFF;
+        padding: 10px 20px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    .about a:hover {
+        background-color: #000000;
+    }
+    .contact {
+        margin-top: 40px;
+    }
+    .contact label {
+        display: block;
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    .contact input{
+        width:100% ;
+    }
+    .contact textarea {
+        font-size: 18px;    
+        width: 100%;/* ocupa 100% da área */
+        height: 100px;
+        resize: none;
+    }
+        .contact button {
+        background-color: #FF6347;
+        color: #FFF;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 50px;
+    }
+    .contact button:hover{
+        background-color: #000;
+    }
+    footer{
+        text-align: center;
+        margin: 0;
+    }
+    #marque{
+        font-weight:
+        bolder;
+        color:#000000;
+        font-size: 20px;
+    }
+    #dir_contato{
+        font-weight: bolder;
+        color: #000000;
+    }
+    span {
+        font-weight: bold;
+        color: blue;
+      }
+      .menu-mobile {
+        cursor: pointer;
+    }
+        .menu-mobile span {
+        margin-left: 30px;      
+        display:block;
+        width: 30px;/* largura da barra */
+        height: 4px;/* espessura da barra */
+        margin-bottom: 5px;
+        background-color: #555;
+        border-radius: 2px;
+    }
 
-/* Estilo do botão dos produtos */
-.produto button {
-	background-color: #FF6347;
-	color: #FFF;
-	border: none;
-	padding: 10px 20px;
-	border-radius: 50px;
-	font-size: 18px;
-	cursor: pointer;
-}
 
-/* Efeito de hover no botão dos produtos */
-.produto button:hover {
-	background-color: #030303;
-}
 
-/* Estilo do bloco "Sobre" */
-.about {
-	margin-top: 40px;	
-}
 
-/* Estilo do texto dentro do bloco "Sobre" */
-.about p {
-	font-size: 18px;
-	line-height: 1.5;
-	color: #555;
-	margin-top: 10px;
-}
 
-/* Estilo do link dentro do bloco "Sobre" */
-.about a {
-	background-color: #FF6347;
-	color: #FFF;
-	padding: 10px 20px;
-	border-radius: 50px;
-	text-decoration: none;
-	font-size: 18px;
-	margin-top: 20px;
-}
 
-/* Efeito de hover no link dentro do bloco "Sobre" */
-.about a:hover {
-	background-color: #000000;
-}
 
-/* Estilo do bloco "Contato" */
-.contact {
-	margin-top: 40px;
-}
 
-/* Estilo do label dentro do bloco "Contato" */
-.contact label {
-	display: block;
-	font-size: 18px;
-	margin-top: 20px;
-}
 
-/* Estilo do input dentro do bloco "Contato" */
-.contact input {
-	width: 100%;
-}
 
-/* Estilo do textarea dentro do bloco "Contato" */
-.contact textarea {
-	font-size: 18px;
-	width: 100%;
-	height: 100px;
-	resize: none;
-}
 
-/* Estilo do botão dentro do bloco "Contato" */
-.contact button {
-	background-color: #FF6347;
-	color: #FFF;
-	border: none;
-	padding: 10px 20px;
-	border-radius: 50px;
-}
 
-/* Efeito de hover no botão dentro do bloco "Contato" */
-.contact button:hover {
-	background-color: #000;
-}
 
-/* Estilo do rodapé */
-footer {
-	text-align: center;
-	margin: 0;
-}
-
-/* Estilo do texto "Marque" */
-#marque {
-	font-weight: bolder;
-	color: #000000;
-	font-size: 20px;
-}
-
-/* Estilo do texto "Direção de Contato" */
-#dir_contato {
-	font-weight: bolder;
-	color: #000000;
-}
-
-/* Estilo do span */
-span {
-	font-weight: bold;
-	color: blue;
-}
-
-/* Estilo do menu mobile */
-.menu-mobile {
-	cursor: pointer;
-}
-/* Estilo das linhas do ícone de menu */
-.menu-mobile span {
-	margin-left: 30px;		
-	display:block;
-	width: 30px; /* largura da barra */
-	height: 4px; /* espessura da barra */
-	margin-bottom: 5px;
-	background-color: #555;
-	border-radius: 2px;
-}
