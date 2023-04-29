@@ -85,7 +85,7 @@ body{
         margin-bottom: 40px; /* cria um espaço entre as caixas de produtos */
    }
     .produto:hover {
-        transform: scale(1.5); /* aumenta o tamanho do da caixa de produtos*/
+        transform: scale(2); /* aumenta o tamanho do da caixa de produtos*/
     }
     .produto img {
         max-width: 100%;
