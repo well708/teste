@@ -1,8 +1,9 @@
 body{/* CSSs gerais do site */
 	font-family: Arial, Helvetica, sans-serif;
 	padding: 0;/* define o espeaço interno entre o conteúdo de um elemneto e da borda */
-	margin: 0 auto;/* remover todas as margens */
-	max-width: 90%;/* limita o tamnho do body */
+	margin: auto;/* margem altomárica  */
+	min-width: 320px;
+	max-width: 320px;/* limita o tamnho maximo do body */
 	border: 2px solid #cfccc7;
 	}
 	header{/* CSSs do menu */
@@ -24,6 +25,7 @@ body{/* CSSs gerais do site */
 		list-style: none;		
 		color: #000000;
 		display: flex;
+		flex-wrap: wrap;
 	}
 	div li a {
 		text-decoration: none;
@@ -43,6 +45,7 @@ body{/* CSSs gerais do site */
 		/* define um elemento como um contêiner flexível  */
 		flex-direction: column;/* define a direção em que os itens são posicionados dentro de um contêiner flexível */
 		justify-content: center;/* centralizar os itens dentro de um contêiner flexível horizontalmente */
+		
 		align-items: center;/* alinha os ítens no centro */
 		color: #FF6347;
 		margin-top: 50px;
