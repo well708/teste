@@ -243,20 +243,3 @@ span {
 	background-color: #555;
 	border-radius: 2px;
 }
-
-/* Media queries para telas menores */
-@media only screen and (max-width: 768px) {
-	.menu-mobile span {
-		width: 20px; /* diminui a largura da barra */
-		height: 3px; /* diminui a espessura da barra */
-		margin-bottom: 4px;
-	}
-}
-
-@media only screen and (max-width: 480px) {
-	.menu-mobile span {
-		width: 15px; /* diminui ainda mais a largura da barra */
-		height: 2px; /* diminui ainda mais a espessura da barra */
-		margin-bottom: 3px;
-	}
-}
