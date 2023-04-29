@@ -13,6 +13,7 @@ body{
         display: flex;
         align-items: center;/* centraliza verticalmente os itens dentro do contêiner */
         justify-content: space-between;  
+		
     }
     #logo{
         display: flex;
@@ -25,8 +26,9 @@ body{
     div ul{
         list-style: none; /*remove marcas de listas, pontos, número…*/
 		display: flex;
+		flex-wrap: wrap;
         color: #000000;
-        display: wrap;
+       
     }
     div li a {
         text-decoration: none;
@@ -71,7 +73,7 @@ body{
     }
     .produtos {
         display: flex;
-	  flex-wrap: wrap; /* faz com que os produtos sejam distribuídos em várias linhas */
+	    flex-wrap: wrap; /* faz com que os produtos sejam distribuídos em várias linhas */
         margin-top: 40px;
         margin-left: 50px;
     }
@@ -99,7 +101,7 @@ body{
         margin-top: 10px;
         color: #555;
     }
-    .produto button {/* Decoração do butão */
+    .produto button {
         background-color: #FF6347;
         color: #FFF;
         border: none;
